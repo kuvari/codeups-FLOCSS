@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.c-btn{
+	display: inline-block;
+	border: 1px solid $white;
+	color: $white;
+	background-color: #333;
+	width: 100%;
+	height: inherit;
+	position: relative;
+	font-size: rem(20);
+	padding: rem(8) 0;
+	@include mq(md){
+		font-size: rem(16);
+		padding: rem(16) 0;
+	} 
+}
+
+.c-btn:hover{
+	color: #333;
+	z-index: 999;
+	transition: .3s;
+}
+
+.c-btn::after{
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	display: block;
+	background-color: #fff;
+	transition: 0.3s;
+}
+
+.c-btn:hover::after{
+	width: 100%;
+	z-index: -1;
+	transition: 0.3s;
+}
+
+
+.c-btn--news{
+
+}

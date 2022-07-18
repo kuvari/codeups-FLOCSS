@@ -1,0 +1,115 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-main-content{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;  
+}
+
+.p-main-content__container{
+	width: 100%;
+	height: 100%;
+  margin-top: rem(46);
+  @include mq(md){
+    margin-top: rem(46);
+  }
+}
+
+.p-main-content__items{
+  display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+  width: 100%;
+	height: 100%;
+	@include mq(md){
+		height: 100%;
+		flex-basis: 25%;
+	}
+}
+
+.p-main-content__item{
+	width: 100%;
+	height: 100%;
+	flex-basis: 50%;
+	@include mq(md){
+		height: 100%;
+		flex-basis: 25%;
+	}
+}
+
+.p-main-content__img{
+  position: relative;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding-top: math.div(168,188) * 100%;
+	@include mq(md){
+		padding-top: math.div(960,1192) * 100%;
+	}
+}
+
+.p-main-content__img::after{
+  position: absolute;
+	content: "";
+  width: 100%;
+	height: 100%;
+  background: rgba(255, 255, 255, .6);
+  top: 0;
+  left: 0;
+	opacity: 0;
+  transition: opacity 0.4s;
+	padding-top: math.div(168,188) * 100%;
+	@include mq(md){
+		padding-top: math.div(960,1192) * 100%;
+	}
+}
+
+.p-main-content__img:hover::after{
+  opacity: 1;
+}
+
+.p-main-content__img::before{
+	position: absolute;
+	content:"";
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding-top: math.div(168,188) * 100%;
+	@include mq(md){
+		padding-top: math.div(960,1192) * 100%;
+	}
+}
+
+.p-main-content__img img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+
+.p-main-content__img span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+  height: 100%;
+  font-size: rem(19);
+  letter-spacing: rem(3);
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(md){
+    font-size: rem(25);
+    letter-spacing: rem(1);
+  }
+}

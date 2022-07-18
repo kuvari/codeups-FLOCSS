@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-sp-nav{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #111;
+	@include mq(md){
+		display: none;
+	}
+}
+
+.js-drawer-menu.is-active{
+	display: block;
+}
+
+.p-sp-nav__items{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	padding-top: rem(83);
+	letter-spacing: rem(1.5);
+}
+
+.p-sp-nav__item:not(:first-child){
+	margin-top: rem(32);
+}
+
+.p-sp-nav__item a{
+	display: block;
+	color: white;
+	text-align: center;
+}
+
+.p-sp-nav__item a:hover{
+	background-color: #fff;
+	color: #111;
+	transition: 0.3s;
+}

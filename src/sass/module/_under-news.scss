@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.under-news__inner{
+    width: 100%;
+    padding: 0 rem(20);
+    @include mq(md){
+        padding: initial;
+    }
+}
+
+.under-news__inner:first-child{
+    margin-top: rem(85);
+    @include mq(md){
+        margin-top: rem(69);
+    }
+}
+
+.under-news__inner:nth-child(n + 2){
+    margin-top: rem(32);
+    @include mq(md){
+        margin-top: rem(30);
+    }
+}
+
+.under-news__block{
+    @include mq(md){
+        width: 31.5%;
+    }
+}
+
+.under-news-body__text{
+    @include mq(md){
+        margin-top: initial;
+        width: 68.5%;
+    }
+}

@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.pagetop{
+    position: relative;
+    z-index: 999;
+}
+
+.pagetop__arrow{
+    width: rem(45);
+    height: rem(45);
+    background-color: #fff;
+    position: fixed;
+    bottom: rem(32);
+    right: rem(32);
+    transition: 0.3s;
+}
+
+.pagetop__arrow::after{
+    content: "";
+    width: rem(20);
+    height: rem(20);
+    border-top: 2px solid #333333;
+    border-right: 2px solid #333333;
+    position: absolute;
+    top: rem(19);
+    left: rem(13);
+    transform: rotate(-45deg);
+    transition: .3s;
+}
+
+.pagetop__arrow:hover{
+    background-color: #333;
+}
+
+.pagetop__arrow:hover::after{
+    border-color: #fff;
+}

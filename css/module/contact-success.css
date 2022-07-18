@@ -1,0 +1,63 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+.contact-success {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 20px;
+  padding: 5rem 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .contact-success {
+    padding: 9.375rem 7.5rem;
+    max-width: 80rem;
+  }
+}
+
+.contact-success__title, .contact-success__subtitle {
+  color: #fff;
+  font-size: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .contact-success__title, .contact-success__subtitle {
+    font-size: 1.875rem;
+  }
+}
+
+.contact-success__subtitle {
+  margin-top: 80px;
+  margin-top: 5rem;
+}
+
+.contact-success__btn__inner {
+  margin-top: 80px;
+  margin-top: 5rem;
+}
+
+.text-chage {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=contact-success.css.map */

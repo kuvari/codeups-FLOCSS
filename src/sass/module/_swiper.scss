@@ -1,0 +1,27 @@
+@use "global" as *;
+@use "sass:math";
+  
+.swiper-pagination{
+  @include mq(md){
+    position: relative;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: initial;
+  @include mq(md){
+    left: rem(-50);
+    top: rem(10);
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #C4C4C4;
+    &+&{
+  }
+}
+  
+.swiper-pagination-bullet-active {
+  background: yellow;
+  opacity: 1;
+}

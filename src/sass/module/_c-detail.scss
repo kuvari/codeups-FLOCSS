@@ -1,0 +1,51 @@
+@use "global" as *;
+@use "sass:math";
+
+.c-detail-body{
+    background-color: $bg-gray;
+    color: $white;
+    padding: rem(24) rem(20) rem(21);
+    @include mq(md){
+        background-color: transparent;
+        width: 49.35%
+    }
+}
+
+.c-detail-body__title{
+    text-align: center;
+    @include mq(md){
+        text-align: start;
+        font-size: rem(25);
+        font-family: $base-font-family;
+    }
+}
+
+.c-detail-body__text{
+    letter-spacing: rem(2);
+    line-height: 1.45;
+    @include mq(md){
+        text-align: start;
+        font-size: rem(16);
+        font-family: $base-font-family;
+        letter-spacing: rem(0.4);
+        line-height: 2.2;
+        margin-top: rem(38);
+    }
+}
+
+.c-detail-body__btn{
+	width: 70%;
+	height: 100%;
+	text-align: center;
+	margin-top: rem(26.85);
+	margin-left: auto;
+	margin-right: auto;
+    @include mq(md){
+        margin-top: rem(44);
+		display: flex;
+		align-items: flex-start;
+		margin-left: initial;
+		margin-right: initial;
+	
+    }
+}

@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.form{
+    padding: rem(85) rem(20) rem(120);
+@include mq(md){
+        padding: rem(115) rem(100) rem(150) rem(50);
+    }
+}
+
+.form__inner{
+    width: 100%;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    max-width: rem(335);
+    margin-left: auto;
+    margin-right: auto;
+@include mq(md){
+        flex-direction: row;
+        text-align: right;
+        max-width: rem(696);
+    }
+}
+
+.form__inner{
+    @include mq(md){
+        margin-top: rem(45);
+    }
+}
+
+.form__inner label{
+    font-size: rem(14);
+    padding-right: rem(10);
+    @include mq(md){
+        width: 22.41379310344828%;
+        padding-right: rem(24);
+    }
+}
+
+.form__inner:not(:first-child) label{
+    margin-top: rem(33);
+}
+
+
+.form__inner input{
+    margin-top: rem(18);
+    height: rem(46);
+    @include mq(md){
+        margin-top: initial;
+        min-width: rem(540);
+        width: 77.58620689655172%;
+    }
+}
+
+.form__inner input[type="text"],.form__inner input[type="email"]{
+    background-color: #fff;
+    color: #111;
+}
+
+.form__inner textarea{
+    margin-top: rem(18);
+    background-color: #fff;
+    height: rem(250);
+    @include mq(md){
+        min-width: rem(540);
+        width: 77.58620689655172%;
+        height: rem(300);
+        font-size: 15px;
+    }
+}
+
+.form__button{
+    color: $white;
+    text-decoration: none;
+    height: rem(50);
+    width: 100%;
+    margin-top: rem(47);
+    display: flex;
+    justify-content: center;
+    @include mq(md){
+        margin-top: rem(56);
+        display: block;
+        height: rem(50);
+        position: relative;
+        max-width: rem(696);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.form__button span{
+    font-size: rem(20);
+    color: #333;
+    height: rem(50);
+    background-color: $white;
+    width: rem(335);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md){
+        position: absolute;
+        top: 0;
+        left: 35%;
+        font-size: rem(16);
+    }
+}
+  

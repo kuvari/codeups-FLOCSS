@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.c-under-view__inner{
+    position: relative;
+    @include mq(md){
+    }
+}
+
+.c-under-view__img{
+    width: 100%;
+    padding-top: 113.4%;
+    background-size: cover;
+    @include mq(md){
+    padding-top: 29.15%;
+    }
+}
+
+.c-under-view__body{
+    position: absolute;
+    color: $white;
+    font-family: $base-font-family;
+    font-weight: $bold;
+    font-size: rem(30);
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    letter-spacing: rem(2);
+    @include mq(md){
+        font-size: rem(35);
+        top: 50%;
+        letter-spacing: initial;
+    }
+}
+
+.c-under-view__img--news{
+    background-image: url(/images/common/news-spmv.jpg);
+    @include mq(md){
+        background-image: url(/images/common/news-mv.jpg);
+    }
+}
+
+.c-under-view__img--overview{
+    background-image: url(/images/common/overview-spmv.jpg);
+    @include mq(md){
+        background-image: url(/images/common/overview-mv.jpg);
+    }
+}
+
+.c-under-view__img--contact{
+    background-image: url(/images/common/contact-spmv.jpg);
+    @include mq(md){
+        background-image: url(/images/common/contact-mv.jpg);
+    }
+}
+
+.c-under-view__img--content{
+    background-image: url(/images/common/main-content1.jpg);
+    @include mq(md){
+    background-image: url(/images/common/content-mv.jpg);
+    }
+}
+
+.c-under-view__img--blog{
+    background-image: url(/images/common/blogs-spmv.jpg);
+    @include mq(md){
+        background-image: url(/images/common/blogs-mv.jpg);
+    }
+}
+
+.c-under-view__img--works{
+    background-image: url(/images/common/work-mv.jpg);
+    @include mq(md){
+        background-image: url(/images/common/work-mv.jpg);
+    }
+}

@@ -1,0 +1,52 @@
+@use "global" as *;
+
+
+.p-main-blog{
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p-main-blog__list{
+    position: relative;
+    margin-top: rem(50);
+    @include mq(md){
+        margin-top: rem(39);
+    }
+}
+
+.p-main-blog__icon{
+    z-index: 999;
+    position: absolute;
+    top: rem(-30);
+    left: 0;
+    @include mq(md){
+        top: rem(-25);
+        left: rem(0);
+    }
+}
+
+.c-new-icon{
+    width: rem(60);
+    height: rem(60);
+    background-color: #FFBA6A;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: rem(16);
+}
+
+.p-main-blog__btn{
+    margin-top: rem(24);
+    text-align: center;
+	width: 40%;
+    margin: rem(15) auto;
+    @include mq(md){
+        margin-top: rem(45);
+        width: 50%;
+    }
+}   

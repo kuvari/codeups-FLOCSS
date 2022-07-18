@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.c-section-title{
+    width: 100%;
+    margin-top: rem(114);
+    @include mq(md){
+        margin-top: rem(189);
+        position: relative;
+    }
+}
+
+.c-section-title__sub--content{
+	@include mq(md){
+			margin-top: rem(-60);
+	}
+}
+
+.c-section-title__sub--left{
+   text-align: center;
+   margin-top: rem(-25);
+    @include mq(md){
+       text-align: initial;
+        margin-top: rem(-70);
+		padding-left: rem(90);
+    }
+}
+
+.c-section-title__sub--right{
+    width: 100%;
+    text-align: center;
+    margin-top: rem(-14);
+    @include mq(md){
+        position: absolute;
+        text-align: right;;
+        top: rem(-22);
+        right: rem(89); 
+        width: 30%;
+        margin-top: initial;
+    }
+}
+.c-section-title__sub--content{
+    margin-top: rem(-20);
+   text-align: center;
+    @include mq(md){
+        margin-top: rem(-92);
+        padding-left: rem(40);
+       text-align: left;
+    }
+}
+.c-section-title__sub--contact{
+    margin-top: rem(-20);
+    @include mq(md){
+        margin-top: rem(-92);
+        padding-left: rem(40);
+       text-align: left;
+    }
+}
+
+.c-section-title__main{
+	text-align: center;
+    color: $white;
+    font-family: $base-font-family;
+    font-size: rem(20);
+    letter-spacing: rem(2);
+    @include mq(md){
+        font-size: rem(30);
+				font-weight: normal;
+    }
+}
+
+.c-section-title__sub{
+    color: $main-yellow;
+    font-family: $second-font-family;
+    font-size: rem(50);
+    text-transform: capitalize;
+    letter-spacing: rem(2);
+    line-height: 1;
+    @include mq(md){
+        font-size: rem(110);
+    }
+}
+

@@ -1,0 +1,108 @@
+@use "global" as *;
+@use "sass:math";
+/*
+.bg-line__inner{
+    position: relative;
+    @include mq(md){
+        max-width: rem(1280);
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+    }
+}
+
+.bg-line__left{
+    position: absolute;
+    z-index: -1;
+    top: rem(-125);
+    left: rem(-199);
+    @include mq(md){
+        top: rem(104);
+        left: rem(-263);
+    }
+}
+
+.bg-line__left::before{
+    content: "";
+    display: inline-block;
+    width: rem(773);
+    height: 1px;
+    transform: rotate(61deg);
+    background-color: #F9F871;
+    @include mq(md){
+        transform: rotate(45deg);
+        width: rem(1780);
+    }
+}
+
+.bg-line__right{
+    position: absolute;
+    z-index: -1;
+    top: rem(952);
+    left: rem(-537);
+    @include mq(md){
+        top: rem(1275);
+        left: rem(-265);
+    }   
+}
+
+.bg-line__right::after{
+    content: "";
+    display: inline-block;
+    width: rem(1447);
+    height: 1px;
+    transform: rotate(-75deg);
+    background-color: #F9F871;
+    max-width: rem(1280);
+    @include mq(md){
+        transform: rotate(-45deg);
+        width: rem(1780);
+    }
+}
+*/
+
+.work-bg-line{
+    position: relative;
+}
+
+.work-bg-line::before{
+    position: absolute;
+    content: "";
+    width: 94.13333333333333%;
+    height: rem(640);
+    left: 0;
+    top: rem(-526);
+    z-index: -1;
+    background-image: linear-gradient(to right top,
+    transparent 49.9%,rgba(249,248,113,0.3) 50%,rgba(249,248,113,0.55) 50.1%,
+    transparent 50.15%);
+    @include mq(md){
+        width: 94.6875%;
+        height: rem(1215);
+        left: 0;
+        top: rem(-705);
+    }
+}
+
+.overview-bg-line{
+    position: relative;
+}
+
+.overview-bg-line::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: rem(1394);
+    left: 0;
+    top: rem(-600);
+    z-index: -1;
+    background-image: linear-gradient(to left top,
+    transparent 49.9%,rgba(249,248,113,0.3) 50%,rgba(249,248,113,0.55) 50.1%,
+    transparent 50.15%);
+    @include mq(md){
+        width: 94.6875%;
+        height: rem(1215);
+        left: 0;
+        top: rem(-195);
+        }
+}

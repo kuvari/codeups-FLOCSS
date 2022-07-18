@@ -1,0 +1,136 @@
+@use "global"as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.p-header {
+  background-color: rgba(17, 17, 17, 0.7);
+  height: rem(50);
+}
+
+.p-header.transform {
+  background-color: #111;
+  transition: 0.3s;
+}
+
+.p-header__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 rem(22);
+  @include mq(md) {
+    padding: 0 0 0 rem(33);
+  }
+}
+
+.p-header__block {
+  height: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-header__logo {
+  width: rem(70);
+  z-index: 99;
+  align-items: stretch;
+  @include mq(md) {
+    width: rem(95);
+  }
+}
+
+.p-header__pc-nav.p-pc-nav {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.p-pc-nav__items {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.p-pc-nav {
+  height: inherit;
+}
+
+.p-pc-nav__item {
+  height: inherit;
+  color: $white;
+  font-size: rem(16);
+  font-family: $base-font-family;
+}
+
+.p-pc-nav__item a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  letter-spacing: rem(1.5);
+  padding: 0 rem(16);
+  position: relative;
+}
+
+.p-pc-nav__item:not(:last-child) a::after {
+  position: absolute;
+  bottom: 0;
+  left: rem(9);
+  content: '';
+  width: 80%;
+  height: 1px;
+  background: #FFEA2E;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+
+.p-pc-nav__item a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.p-pc-nav__item.p-pc-nav__item--white {
+  margin-left: rem(16);
+  position: relative;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a {
+  background-color: #fff;
+  color: #333;
+  padding: 0 rem(32);
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a:hover {
+  color: #fff;
+  z-index: 999;
+  transition: .3s;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: inherit;
+  display: block;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+.p-pc-nav__item.p-pc-nav__item--white a:hover::after {
+  width: 100%;
+  z-index: -1;
+  transition: 0.3s;
+}

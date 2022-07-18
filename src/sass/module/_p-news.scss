@@ -1,0 +1,142 @@
+@use "global" as *;
+
+.news__inner{
+    width: 100%;
+    color: $white;
+    @include mq(md){
+        padding: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.news-block{
+    display: flex;
+    font-size: rem(16);
+    font-family: $base-font-family;
+    line-height: 2;
+    @include mq(md){
+        height: inherit;
+    }
+}
+
+.news-body__text a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.news-body__text a::after{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: $white;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .3s;
+}
+
+.news-body__text a:hover::after{
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.news-category{
+    line-height: 1;
+    border: 1px solid $white;
+    font-size: rem(14);
+    padding: 0 rem(21);
+    margin-left: rem(29);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md){
+        padding: 0 rem(21);
+        margin-left: rem(48);
+        margin-right: rem(5);
+    }
+}
+
+.sp-news-btn__inner{
+    text-align: center;
+    margin-top: rem(26.5);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md){
+        display: none;
+    }
+}
+
+.pc-news-body__btn{
+    display: none;
+    @include mq(md){
+        display: block;
+        margin-top: 0;
+        max-width: 13%;
+        width: 100%;
+    }
+}
+
+.pc-btn__inner{
+    @include mq(md){
+        color: $bg-gray;
+        text-decoration: none;
+        height: rem(32);
+    }
+  }
+  
+.pc-btn{
+    @include mq(md){
+        position: relative;
+        display: block;
+        width: rem(135);
+        height: inherit;
+        font-size: rem(16);
+        background-color: $white;
+        text-align: center;
+    }
+}
+
+.pc-btn-text{
+    @include mq(md){
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    letter-spacing: 0;
+    padding-top: rem(2);
+    }
+}
+
+.pc-btn-text::before{
+    @include mq(md){
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background-color: $bg-gray;
+    z-index: -1;
+    transition: 0.5s;
+    }
+}
+
+.pc-btn-text:hover{
+    @include mq(md){
+        color: $white;
+    }
+}
+
+.pc-btn-text:hover::before{
+    @include mq(md){
+     width: 100%;
+    height: inherit;
+    }
+}

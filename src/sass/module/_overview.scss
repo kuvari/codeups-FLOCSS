@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.overview{
+    padding: 0 rem(20) rem(120);
+    @include mq(md){
+        padding: 0 rem(87) rem(150);
+    }
+}
+/*
+.overview-body{
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-top: rem(85);
+    @include mq(md){
+        margin-top: rem(115);
+    }
+}
+
+.overview-body__block::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    background-color: $white;
+    top: rem(10);
+    left: 0;
+    @include mq(md){
+        top: rem(10);
+    }
+}
+
+.overview-body__block{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: rem(30) 0;
+}
+
+.overview-body__title{
+    width: 30%;
+    color: $white;
+    font-size: rem(16);
+    font-family: $base-font-family;
+    @include mq(md){
+        font-size: rem(13);
+    }
+}
+
+.overview-body__text{
+    width: 70%;
+    color: $white;
+    font-size: rem(16);
+    font-family: $base-font-family;
+    @include mq(md){
+        font-size: rem(13);
+    }
+}*/
+
+.overview-body{
+    width: 100%;
+    color: $white;
+}
+
+.overview-body__inner{
+    margin-top: rem(85);
+    @include mq(md){
+        margin-top: rem(115);
+    }
+}
+
+.overview-body th,.overview-body td{
+    border-bottom: 1px solid $white;
+    padding: rem(30) 0;
+}
+
+.overview-body th{
+    width: 20%;
+    text-align: left;
+}
+
+.overview-body td{
+    width: 80%;
+}
+
+.overview-map{
+    max-width: rem(600);
+    width: 100%;
+    margin-top: rem(120);
+    height: rem(300);
+    @include mq(md){
+        margin-top: rem(80);
+        height: rem(367);
+    }
+}
+
+.overview-map iframe{
+    width: 100%;
+    height: 100%;
+}

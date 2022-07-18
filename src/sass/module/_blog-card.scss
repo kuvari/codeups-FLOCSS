@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.blog__card-lists{
+    position: relative;
+}
+
+.blog__card-title{
+    width: 100%;
+    border: 1px solid $white;
+    background-color: #333;
+    box-sizing: border-box;
+}
+
+.blog__card-title h2{
+    color: $white;
+    font-size: rem(16);
+    text-align: center;
+    letter-spacing: rem(2);
+    line-height: 2.55;
+}
